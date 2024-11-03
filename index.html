@@ -1,7 +1,483 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona Powitalna</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+    <!-- Navbar -->
+    <nav class="navbar_">
+        <a href="#" class="logo">ThunderStorm24</a>
+        <ul class="nav-links">
+            <li><a href="#intro">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#services">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sekcja powitalna -->
+    <section id="intro" class="intro">
+        <div class="home">
+            <div class="home-content">
+                <h1>Hi, I'm Patryk Orkisz</h1>
+                <h3>Programmer</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="btn-box">
+                    <a href="#">Let's talk</a>
+                    <a href="#skills">Skills</a>
+                </div>
+            </div>
+
+            <div class="photo">
+                <img src="images/profile.jpg" alt="Moje zdjęcie">
+            </div>
+        </div>
+        <div class="home-icons">
+            <a href="https://github.com/ThunderStorm24" target="_blank"><i class="bx bxl-github"></i></a>
+            <a href="https://www.linkedin.com/in/patryk-orkisz-5b526b335/" target="_blank"><i
+                    class="bx bxl-linkedin"></i></a>
+            <a href="https://www.youtube.com/@ThunderStorm24" target="_blank"><i class="bx bxl-youtube"></i></a>
+        </div>
+    </section>
+
+    <!-- Sekcja o mnie -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>About me</h2>
+            <p>I am a passionate programmer with a degree in engineering, currently pursuing a master's degree. My
+                specialization lies in developing websites and web applications, as well as mobile applications.
+                Additionally, I am skilled in creating animations and video editing.</p>
+            <p>My technical expertise includes programming in JavaScript and utilizing various technologies essential
+                for modern multimedia and web projects. As a creative individual focused on growth, I strive to blend
+                aesthetics with functionality in all my projects.</p>
+        </div>
+        <div class="about-info">
+            <h2>Details:</h2>
+
+            <div class="details-icon">
+                <i class='bx bx-rename'></i>
+                <div class="details"><b>FULLNAME:</b>
+                    <p>Patryk Adrian Orkisz</p>
+                </div>
+            </div>
+
+            <div class="details-icon">
+                <i class='bx bx-gift'></i>
+                <div class="details"><b>BIRTH DATE:</b>
+                    <p>24.08.2000</p>
+                </div>
+            </div>
+
+            <div class="details-icon">
+                <i class='bx bxs-terminal'></i>
+                <div class="details"><b>JOB:</b>
+                    <p>Student, Programmer</p>
+                </div>
+            </div>
+
+            <div class="details-icon">
+                <i class='bx bx-envelope'></i>
+                <div class="details"><b>E-MAIL:</b>
+                    <p>patryko5@onet.pl</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="about-details">
+            <h2>Education: </h2>
+            <div class="university">
+                <img src="images/uslogo.png" alt="Moje zdjęcie" class="university-logo">
+                <div class="university-details">
+                    <b>University of Silesia in Katowice</b>
+                    <p>Master's degree (M.Sc.) in Computer Science, Computer Graphics Team</p>
+                    <p class="grey">March 2024 - September 2025</p>
+                </div>
+            </div>
+            <div class="university">
+                <img src="images/uslogo.png" alt="Moje zdjęcie" class="university-logo">
+                <div class="university-details">
+                    <b>University of Silesia in Katowice</b>
+                    <p>Engineer (B.Sc. Eng.), Computer Science, Web Application Development</p>
+                    <p class="grey">October 2020 - February 2024</p>
+                </div>
+            </div>
+            <div class="university">
+                <img src="images/zselogo.jpg	" alt="Moje zdjęcie" class="university-logo">
+                <div class="university-details">
+                    <b>School Complex of Electronics and Computer Science in Sosnowiec</b>
+                    <p>Technician, Computer Science</p>
+                    <p class="grey">September 2016 – May 2020</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Sekcja o umiejętnościach -->
+    <section id="skills" class="skills">
+        <div class="skills-content mt-5">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseWebDev" aria-expanded="true" aria-controls="collapseWebDev">
+                            Fronted Technologies
+                        </button>
+                    </h2>
+                    <div id="collapseWebDev" class="accordion-collapse collapse show"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body" style="max-height: 600px; overflow-y: auto;">
+                            <h2 class="text-center mb-4">My Fronted Technologies skills</h2>
+
+                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                                <!-- JavaScript -->
+                                <div class="col mb-4">
+                                    <div class="card text-center p-3 shadow-sm">
+                                        <i class="fab fa-js-square fa-3x text-warning mb-3"></i>
+                                        <h5 class="card-title">JavaScript</h5>
+                                        <div class="font-weight-bold text-success mt-2">Advanced</div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 80%;"
+                                                aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- HTML -->
+                                <div class="col mb-4">
+                                    <div class="card text-center p-3 shadow-sm">
+                                        <i class="fab fa-html5 fa-3x text-danger mb-3"></i>
+                                        <h5 class="card-title">HTML</h5>
+                                        <div class="font-weight-bold text-success mt-2">Advanced</div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 80%;"
+                                                aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- CSS -->
+                                <div class="col mb-4">
+                                    <div class="card text-center p-3 shadow-sm">
+                                        <i class="fab fa-css3-alt fa-3x text-primary mb-3"></i>
+                                        <h5 class="card-title">CSS</h5>
+                                        <div class="font-weight-bold text-success mt-2">Advanced</div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 80%;"
+                                                aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Bootstrap -->
+                                <div class="col mb-4">
+                                    <div class="card text-center p-3 shadow-sm">
+                                        <i class="fab fa-bootstrap fa-3x text-primary mb-3"></i>
+                                        <h5 class="card-title">Bootstrap</h5>
+                                        <div class="font-weight-bold text-success mt-2">Advanced</div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 80%;"
+                                                aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- React -->
+                                <div class="col-md-4 mb-4">
+                                    <div class="card text-center p-3 shadow-sm">
+                                        <i class="fab fa-react fa-3x text-info mb-3"></i>
+                                        <h5 class="card-title">React</h5>
+                                        <div class="font-weight-bold text-success mt-2">Advanced</div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 80%;"
+                                                aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- React-Bootstrap -->
+                                <div class="col-md-4 mb-4">
+                                    <div class="card text-center p-3 shadow-sm">
+                                        <i class="fab fa-react fa-3x text-info mb-3"></i>
+                                        <h5 class="card-title">React-Bootstrap</h5>
+                                        <div class="font-weight-bold text-success mt-2">Advanced</div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 80%;"
+                                                aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Three.js -->
+                                <div class="col-md-4 mb-4">
+                                    <div class="card text-center p-3 shadow-sm">
+                                        <img src="images/threejs.png" alt="Three.js Logo" class="fa-1x mb-3 mx-auto"
+                                            style="width: 3em; height: 3em;">
+
+                                        <h5 class="card-title">Three.js</h5>
+                                        <div class="font-weight-bold text-danger mt-2">Beginner</div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 25%;"
+                                                aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseBackendTech" aria-expanded="false"
+                            aria-controls="collapseBackendTech">
+                            Backend Technologies:
+                        </button>
+                    </h2>
+                    <div id="collapseBackendTech" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body" style="max-height: 600px; overflow-y: auto;">
+                            <h2 class="text-center mb-4">My Backend Technologies Skills</h2>
+
+                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+                                <!-- MySQL -->
+                                <div class="col-md-4 mb-4">
+                                    <div class="card text-center p-3 shadow-sm">
+                                        <i class="fas fa-database fa-3x text-secondary mb-3"></i>
+                                        <h5 class="card-title">MySQL</h5>
+                                        <div class="font-weight-bold text-success mt-2">Advanced</div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 80%;"
+                                                aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Node.js -->
+                                <div class="col-md-4 mb-4">
+                                    <div class="card text-center p-3 shadow-sm">
+                                        <i class="fab fa-node-js fa-3x text-success mb-3"></i>
+                                        <h5 class="card-title">Node.js</h5>
+                                        <div class="font-weight-bold text-success mt-2">Advanced</div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 80%;"
+                                                aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- PHP -->
+                                <div class="col mb-4">
+                                    <div class="card text-center p-3 shadow-sm">
+                                        <i class="fab fa-php fa-3x text-dark mb-3"></i>
+                                        <h5 class="card-title">PHP</h5>
+                                        <div class="font-weight-bold text-warning mt-2">Basic</div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 40%;"
+                                                aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Laravel -->
+                                <div class="col-md-4 mb-4">
+                                    <div class="card text-center p-3 shadow-sm">
+                                        <i class="fab fa-laravel fa-3x text-danger mb-3"></i>
+                                        <h5 class="card-title">Laravel</h5>
+                                        <div class="font-weight-bold text-warning mt-2">Basic</div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 40%;"
+                                                aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseMobileDev" aria-expanded="false" aria-controls="collapseMobileDev">
+                            Mobile Development
+                        </button>
+                    </h2>
+                    <div id="collapseMobileDev" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body" style="max-height: 600px; overflow-y: auto;">
+                            <h2 class="text-center mb-4">My Mobile Development Skills</h2>
+
+                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                                <!-- Flutter -->
+                                <div class="col-md-4 mb-4">
+                                    <div class="card text-center p-3 shadow-sm">
+                                        <img src="images/flutter.png" alt="Three.js Logo" class="fa-1x mb-3 mx-auto"
+                                            style="width: 3em; height: 3em;">
+                                        <h5 class="card-title">Flutter</h5>
+                                        <div class="font-weight-bold text-warning mt-2">Basic</div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 50%;"
+                                                aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Kotlin -->
+                                <div class="col-md-4 mb-4">
+                                    <div class="card text-center p-3 shadow-sm">
+                                        <img src="images/kotlin.png" alt="Three.js Logo" class="fa-1x mb-3 mx-auto"
+                                            style="width: 3em; height: 3em;">
+                                        <h5 class="card-title">Kotlin</h5>
+                                        <div class="font-weight-bold text-danger mt-2">Beginner</div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 25%;"
+                                                aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Android Studio -->
+                                <div class="col-md-4 mb-4">
+                                    <div class="card text-center p-3 shadow-sm">
+                                        <i class="fab fa-android fa-3x text-success mb-3"></i>
+                                        <h5 class="card-title">Android Studio</h5>
+                                        <div class="font-weight-bold text-danger mt-2">Beginner</div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 25%;"
+                                                aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseGameDev" aria-expanded="false" aria-controls="collapseGameDev">
+                            Game Development
+                        </button>
+                    </h2>
+                    <div id="collapseGameDev" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body" style="max-height: 600px; overflow-y: auto;">
+                            <h2 class="text-center mb-4">My Game Development Skills</h2>
+
+                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+                                <!-- Unreal Engine 5 -->
+                                <div class="col mb-4">
+                                    <div class="card text-center p-3 shadow-sm">
+                                        <img src="images/unreal.png" alt="Three.js Logo" class="fa-1x mb-3 mx-auto"
+                                            style="width: 3em; height: 3em;">
+                                        <h5 class="card-title">Unreal Engine 5</h5>
+                                        <div class="font-weight-bold text-danger mt-2">Beginner</div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 25%;"
+                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseProductivitySoft" aria-expanded="false"
+                            aria-controls="collapseProductivitySoft">
+                            Productivity Software
+                        </button>
+                    </h2>
+                    <div id="collapseProductivitySoft" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body" style="max-height: 600px; overflow-y: auto;">
+                            <h2 class="text-center mb-4">My Productivity Software Skills</h2>
+
+                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+                                <!-- Microsoft Word -->
+                                <div class="col-md-4 mb-4">
+                                    <div class="card text-center p-3 shadow-sm">
+                                        <i class="fas fa-file-word fa-3x text-info mb-3"></i>
+                                        <h5 class="card-title">Microsoft Word</h5>
+                                        <div class="font-weight-bold text-success mt-2">Advanced</div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 80%;"
+                                                aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Microsoft Excel -->
+                                <div class="col-md-4 mb-4">
+                                    <div class="card text-center p-3 shadow-sm">
+                                        <i class="fas fa-file-excel fa-3x text-success mb-3"></i>
+                                        <h5 class="card-title">Microsoft Excel</h5>
+                                        <div class="font-weight-bold text-success mt-2">Advanced</div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 80%;"
+                                                aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+    </section>
+
+    <!-- Sekcja o mnie -->
+    <section id="portfolio" class="portfolio">
+        <div class="portfolio-content">
+            <h2>Portfolio</h2>
+
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-pzjw8f+ua7Kw1TIq9kp7by5i6/n7T+0CZ6pZ6tZlXvChKXTGVK1Tf3P6xaHk9l1j"
+        crossorigin="anonymous"></script>
+
 </body>
+
 </html>
