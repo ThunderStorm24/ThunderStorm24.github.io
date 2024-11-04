@@ -488,41 +488,75 @@ body {
     padding: 50px 10%; /* Odsunięcie od krawędzi */
     color: black; /* Kolor tekstu */
     text-align: center; /* Wyśrodkowanie tekstu */
-	height: 100vh;
+	height: 115vh;
 }
 
-.skills-content h2 {
-
+.container {
+	
 }
 
-.skills-content p {
-
+.skills-title h2{
+	font-size: 36px; /* Rozmiar nagłówka */
+    font-weight: 700; /* Pogrubienie nagłówka */
+    margin-bottom: 20px; /* Odsunięcie od dolnej krawędzi */
+    border-bottom: 2px solid #7c19ff; /* Podkreślenie nagłówka */
+    display: inline-block; /* Wyświetlenie jako blok */
+    padding-bottom: 10px; /* Odsunięcie dolne dla podkreślenia */
 }
 
-.portfolio {
-    background: white;
-    padding: 100px 20%; /* Odsunięcie od krawędzi */
-    color: black; /* Kolor tekstu */
-	height: 100vh;
-	display:flex;
-	justify-content:between;
-	flex-wrap:wrap;
+.skills-title p{
+	font-size: clamp(0.7rem, 0.656rem + 0.703vw, 1.2rem);
+    line-height: 1.6; /* Wysokość linii dla lepszej czytelności */
+    margin-bottom: 15px; /* Odsunięcie dolne między akapitami */
+    max-width: 1500px; /* Maksymalna szerokość akapitu */
+    margin-left: auto; /* Wyśrodkowanie */
+    margin-right: auto; /* Wyśrodkowanie */
 }
 
-.portfolio-content{
-	display:flex;
-	justify-content: center;
-	flex-direction: column;
-	width:100%;
-}
-
-.portfolio-content h2 {
+.portfolio .section-title {
     font-size: 36px; /* Rozmiar nagłówka */
     font-weight: 700; /* Pogrubienie nagłówka */
     margin-bottom: 20px; /* Odsunięcie od dolnej krawędzi */
     border-bottom: 2px solid #7c19ff; /* Podkreślenie nagłówka */
     display: inline-block; /* Wyświetlenie jako blok */
     padding-bottom: 10px; /* Odsunięcie dolne dla podkreślenia */
+    }
+
+    .portfolio .section-description {
+    font-size: clamp(0.7rem, 0.656rem + 0.703vw, 1.2rem);
+    line-height: 1.6; /* Wysokość linii dla lepszej czytelności */
+    margin-bottom: 15px; /* Odsunięcie dolne między akapitami */
+    max-width: 1500px; /* Maksymalna szerokość akapitu */
+    margin-left: auto; /* Wyśrodkowanie */
+    margin-right: auto; /* Wyśrodkowanie */
+    }
+
+    .portfolio .card {
+        border: none;
+        transition: transform 0.7s;
+    }
+
+    .portfolio .card:hover {
+        transform: scale(1.08);
+    }
+
+    .portfolio .card-title {
+        font-size: 1.8rem;
+    }
+	
+	.portfolio .card-text{
+		font-size: clamp(0.7rem, 0.656rem + 0.703vw, 1.2rem);
+	}
+
+    .portfolio .tech-icons i {
+		font-size: clamp(0.7rem, 0.656rem + 0.703vw, 1.2rem);
+        color: #555;
+    }
+	
+.portfolio .tech-icons img {
+    width: clamp(0.7em, 0.656rem + 0.703vw, 1.2rem); /* Ustawia rozmiar od 1.5em do 2em w zależności od rozmiaru ekranu */
+    height: clamp(0.7em, 0.656rem + 0.703vw, 1.2rem); /* Utrzymuje proporcje, ale też ogranicza wysokość */
+    vertical-align: middle; /* Ustawia obrazek na środkowej wysokości w linii z tekstem */
 }
 
 @keyframes showRight{
@@ -561,6 +595,11 @@ body {
 	.about {
 		padding: 50px 5%;
 	}
+	
+	.skills {
+		padding: 50px 5%;
+		height: 130vh;
+	}
 }
 
 /* Responsywność dla bardzo małych ekranów (smartfony) */
@@ -578,8 +617,4 @@ body {
         width: 250px;
         height: 250px;
     }
-	
-	.about {
-		padding: 50px 5%;
-	}
 }
