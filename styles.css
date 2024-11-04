@@ -689,7 +689,7 @@ body {
 	}
 }
 
-@media (max-width: 320px) {
+@media (max-width: 768px) {
 
 	.intro {
 		height: 140vh;
