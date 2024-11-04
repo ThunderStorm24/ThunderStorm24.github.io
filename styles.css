@@ -688,3 +688,21 @@ body {
 		height: 250px;
 	}
 }
+
+@media (max-width: 320px) {
+
+	.intro {
+		height: 140vh;
+	}
+
+	.about {
+		padding: 50px 5%;
+		height: 110vh;
+	}
+
+	.skills {
+		padding: 50px 5%;
+		height: 140vh;
+	}
+
+}
