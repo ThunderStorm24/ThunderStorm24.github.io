@@ -692,12 +692,12 @@ body {
 @media (max-width: 768px) {
 
 	.intro {
-		height: 140vh;
+		height: 150vh;
 	}
 
 	.about {
 		padding: 50px 5%;
-		height: 110vh;
+		height: 120vh;
 	}
 
 	.skills {
