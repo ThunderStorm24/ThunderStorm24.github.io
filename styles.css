@@ -716,3 +716,35 @@ body {
 	}
 
 }
+
+@media (min-width: 1080px) and (min-height: 1200px) {
+	.intro {
+		height: 50vh;
+	}
+
+	.about {
+		padding: 50px 5%;
+		height: 50vh;
+	}
+
+	.skills {
+		padding: 50px 5%;
+		height: 60vh;
+	}
+}
+
+@media (min-width: 1600px) and (min-height: 1200px) {
+	.intro {
+		height: 70vh;
+	}
+
+	.about {
+		padding: 50px 5%;
+		height: 70vh;
+	}
+
+	.skills {
+		padding: 50px 5%;
+		height: 90vh;
+	}
+}
