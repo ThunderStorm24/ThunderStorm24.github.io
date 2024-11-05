@@ -94,7 +94,7 @@ body {
 .intro {
 	background: #120069;
 	display:block;
-	padding-bottom: 1rem; /* Dodaj więcej odstępu na dole */
+	padding-bottom: 1rem;
 }
 
 /* Sekcja kontentu z flexbox i flex-wrap */
@@ -661,7 +661,9 @@ body {
 /* Responsywność dla bardzo małych ekranów (smartfony) */
 @media (max-width: 1300px) {
 
-
+	.home{
+		padding: 0 10%;
+	}
 
 	.home {
 		justify-content: center;
@@ -671,10 +673,13 @@ body {
 		width: 250px;
 		height: 250px;
 	}
+
+	.about {
+		padding: 50px 10%;
+	}
 }
 
 @media (max-width: 768px) {
-
 
 
 }
