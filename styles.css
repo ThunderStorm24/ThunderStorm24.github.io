@@ -682,17 +682,23 @@ body {
 @media (max-width: 768px) {
 
 	.about {
-		padding: 50px 10%;
+		padding: 50px 5%;
 	}
-	
+
 }
 
 @media (min-width: 1080px) and (min-height: 1200px) {
 
+	.about {
+		padding: 50px 10%;
+	}
 
 }
 
 @media (min-width: 1600px) and (min-height: 1200px) {
 
+	.about {
+		padding: 50px 10%;
+	}
 
 }
