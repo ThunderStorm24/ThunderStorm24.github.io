@@ -14,7 +14,6 @@ html {
 
 body {
 	background: white;
-	height: 100vh;
 }
 
 /* Navbar styl */
@@ -94,7 +93,8 @@ body {
 /* Styl dla sekcji powitalnej */
 .intro {
 	background: #120069;
-	height: 100vh;
+	display:block;
+	padding-bottom: 1rem; /* Dodaj więcej odstępu na dole */
 }
 
 /* Sekcja kontentu z flexbox i flex-wrap */
@@ -412,7 +412,6 @@ body {
 	/* Odsunięcie od krawędzi */
 	color: black;
 	/* Kolor tekstu */
-	height: 100vh;
 	display: flex;
 	justify-content: between;
 	flex-wrap: wrap;
@@ -423,6 +422,7 @@ body {
 	justify-content: center;
 	flex-direction: column;
 	width: 100%;
+	display: block;
 }
 
 .about-content h2 {
@@ -534,10 +534,8 @@ body {
 	/* Kolor tekstu */
 	text-align: center;
 	/* Wyśrodkowanie tekstu */
-	height: 115vh;
+	display: block;
 }
-
-.container {}
 
 .skills-title h2 {
 	font-size: 36px;
@@ -637,10 +635,6 @@ body {
 /* Responsywność dla mniejszych ekranów (tablety i mniejsze) */
 @media (max-width: 1600px) {
 
-	.intro {
-		height: 120vh;
-	}
-
 	.photo img {
 		width: 400px;
 		height: 400px;
@@ -662,32 +656,12 @@ body {
 		display: flex;
 	}
 
-	.about {
-		padding: 50px 5%;
-	}
-
-	.skills {
-		padding: 50px 5%;
-		height: 130vh;
-	}
 }
 
 /* Responsywność dla bardzo małych ekranów (smartfony) */
 @media (max-width: 1300px) {
 
-	.intro {
-		height: 130vh;
-	}
 
-	.about {
-		padding: 50px 5%;
-		height: 125vh;
-	}
-
-	.skills {
-		padding: 50px 5%;
-		height: 190vh;
-	}
 
 	.home {
 		justify-content: center;
@@ -701,50 +675,16 @@ body {
 
 @media (max-width: 768px) {
 
-	.intro {
-		height: 150vh;
-	}
 
-	.about {
-		padding: 50px 5%;
-		height: 120vh;
-	}
-
-	.skills {
-		padding: 50px 5%;
-		height: 140vh;
-	}
 
 }
 
 @media (min-width: 1080px) and (min-height: 1200px) {
-	.intro {
-		height: 50vh;
-	}
 
-	.about {
-		padding: 50px 5%;
-		height: 50vh;
-	}
 
-	.skills {
-		padding: 50px 5%;
-		height: 60vh;
-	}
 }
 
 @media (min-width: 1600px) and (min-height: 1200px) {
-	.intro {
-		height: 70vh;
-	}
 
-	.about {
-		padding: 50px 5%;
-		height: 70vh;
-	}
 
-	.skills {
-		padding: 50px 5%;
-		height: 90vh;
-	}
 }
