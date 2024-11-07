@@ -9,17 +9,14 @@
 
 html {
 	scroll-behavior: smooth;
-	/* Płynne przewijanie */
 }
 
 body {
 	background: white;
 }
 
-/* Navbar styl */
 .navbar_ {
 	position: fixed;
-	/* Przyklejony navbar */
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -29,7 +26,6 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	background-color: rgba(46, 2, 73, 0);
-	/* Przezroczysty navbar */
 	color: #fff;
 	z-index: 100;
 	transition: 1s
@@ -90,14 +86,12 @@ body {
 
 .nav-links a.active {}
 
-/* Styl dla sekcji powitalnej */
 .intro {
 	background: #120069;
-	display:block;
+	display: block;
 	padding-bottom: 1rem;
 }
 
-/* Sekcja kontentu z flexbox i flex-wrap */
 .home {
 	flex-wrap: wrap;
 	display: flex;
@@ -108,20 +102,37 @@ body {
 
 }
 
-/* Opis tekstowy */
 .home-content {
 	margin-top: 150px;
 	max-width: 600px;
 	flex: 1;
-	/* Pozwala na elastyczne rozciąganie */
 	margin-right: 20px;
-	/* Odstęp między opisem a zdjęciem */
 }
 
 .home-content h1 {
 	position: relative;
 	font-size: 50px;
 	font-weight: 700;
+}
+
+.cursorRole {
+	font-weight: 700;
+	color: #7c19ff;
+	animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+	50% {
+		color: transparent;
+	}
+}
+
+#role-text {
+	font-size: 36px;
+	font-weight: 700;
+	margin-top: 5px;
+	display: inline-block;
+	white-space: nowrap;
 }
 
 .home-content h1::before {
@@ -250,7 +261,6 @@ body {
 .home-icons {
 	position: relative;
 	display: flex;
-	/* Flexbox dla ikon */
 	width: 200px;
 	display: flex;
 	justify-content: space-between;
@@ -336,82 +346,84 @@ body {
 .photo::before {
 	content: '';
 	position: absolute;
+	scale: 1.1;
 	top: 0;
+	left: 0;
 	right: 0;
-	width: 100%;
-	height: 100%;
+	bottom: 0;
 	background: #120069;
-	animation: showRight 1s ease forwards;
+	z-index: 10;
+	animation: coverToReveal 2s forwards;
 	animation-delay: 1.4s;
+	border-radius: 50%;
 }
 
 .photo img {
 	width: 550px;
 	height: 550px;
 	background: conic-gradient(rgb(128, 0, 0),
-			/* Ciemna czerwień */
 			rgb(0, 0, 128),
-			/* Ciemny niebieski */
 			rgb(0, 128, 0),
-			/* Ciemna zieleń */
 			rgb(128, 128, 0),
-			/* Ciemny żółty */
 			rgb(128, 0, 128),
-			/* Ciemny róż */
-			rgb(75, 0, 130)
-			/* Ciemny fiolet */
-		);
+			rgb(75, 0, 130));
 	border-radius: 50%;
 	object-fit: cover;
 	padding: 5px;
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
-	/* Animacja przy najechaniu */
-	animation: auraPulse 5s infinite alternate;
-	/* Dodanie animacji pulsowania */
-	animation-delay: 2.4s;
+	animation: auraPulse 5s infinite alternate,
+		moveUpDown 4s infinite;
+	animation-delay: 3.4s;
 }
 
-/* Animacja pulsowania aury */
+@keyframes coverToReveal {
+	0% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(0);
+	}
+}
+
+@keyframes moveUpDown {
+	0% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-20px);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
 @keyframes auraPulse {
 	0% {
 		box-shadow:
 			0 0 20px rgba(0, 0, 0, 0.5),
-			/* Cień za zdjęciem */
 			0 0 30px rgba(255, 0, 255, 0.1);
-		/* Aura w kolorze różowym */
 	}
 
 	50% {
 		box-shadow:
 			0 0 30px rgba(0, 0, 0, 0.5),
-			/* Cień za zdjęciem */
 			0 0 50px rgba(255, 0, 255, 1);
-		/* Intensyfikacja aury */
 	}
 
 	100% {
 		box-shadow:
 			0 0 20px rgba(0, 0, 0, 0.5),
-			/* Cień za zdjęciem */
 			0 0 30px rgba(255, 0, 255, 0.8);
-		/* Aura w kolorze różowym */
 	}
-}
-
-/* Efekt powiększenia przy najechaniu */
-.photo img:hover {
-	transform: scale(1.1);
-	/* Lekko powiększa zdjęcie */
-	box-shadow: 0 0 40px rgba(255, 0, 255, 1);
-	/* Intensyfikacja aury */
 }
 
 .about {
 	background: white;
 	padding: 100px 20%;
-	/* Odsunięcie od krawędzi */
 	color: black;
-	/* Kolor tekstu */
 	display: flex;
 	justify-content: between;
 	flex-wrap: wrap;
@@ -427,31 +439,49 @@ body {
 
 .about-content h2 {
 	font-size: 36px;
-	/* Rozmiar nagłówka */
 	font-weight: 700;
-	/* Pogrubienie nagłówka */
 	margin-bottom: 20px;
-	/* Odsunięcie od dolnej krawędzi */
 	border-bottom: 2px solid #7c19ff;
-	/* Podkreślenie nagłówka */
 	display: inline-block;
-	/* Wyświetlenie jako blok */
 	padding-bottom: 10px;
-	/* Odsunięcie dolne dla podkreślenia */
+	white-space: nowrap;
+}
+
+.cursor {
+	font-weight: 700;
+	color: #000;
+	animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+	50% {
+		color: transparent;
+	}
 }
 
 .about-content p {
 	font-size: clamp(0.7rem, 0.656rem + 0.703vw, 1.2rem);
 	line-height: 1.6;
-	/* Wysokość linii dla lepszej czytelności */
 	margin-bottom: 15px;
-	/* Odsunięcie dolne między akapitami */
 	max-width: 1500px;
-	/* Maksymalna szerokość akapitu */
 	margin-left: auto;
-	/* Wyśrodkowanie */
 	margin-right: auto;
-	/* Wyśrodkowanie */
+}
+
+.hide {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity 3s ease, transform 3s ease;
+}
+
+.hide.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.hide.hidden {
+	opacity: 0;
+	transform: translateY(20px);
 }
 
 .about-info {
@@ -491,35 +521,27 @@ body {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	/* Wyrównanie elementów w pionie */
 }
 
 .university img {
 	width: clamp(30px, 5vw, 50px);
 	height: clamp(30px, 5vw, 50px);
 	margin-right: 15px;
-	/* Odstęp między logo a tekstem */
 }
 
 .university-details {
 	display: flex;
-	/* Flexbox dla tekstu */
 	flex-direction: column;
-	/* Układ pionowy dla tekstu */
 }
 
 .university b {
 	width: 100%;
-	/* Nazwa uczelni zajmuje pełną szerokość */
 	margin-bottom: 5px;
-	/* Odstęp pod nazwą uczelni */
 	font-weight: bold;
-	/* Pogrubienie tekstu */
 }
 
 .university p {
 	margin: 0;
-	/* Usunięcie domyślnych marginesów */
 }
 
 .grey {
@@ -529,70 +551,45 @@ body {
 .skills {
 	background: #F2F2F2;
 	padding: 50px 10%;
-	/* Odsunięcie od krawędzi */
 	color: black;
-	/* Kolor tekstu */
 	text-align: center;
-	/* Wyśrodkowanie tekstu */
 	display: block;
 }
 
 .skills-title h2 {
 	font-size: 36px;
-	/* Rozmiar nagłówka */
 	font-weight: 700;
-	/* Pogrubienie nagłówka */
 	margin-bottom: 20px;
-	/* Odsunięcie od dolnej krawędzi */
 	border-bottom: 2px solid #7c19ff;
-	/* Podkreślenie nagłówka */
 	display: inline-block;
-	/* Wyświetlenie jako blok */
 	padding-bottom: 10px;
-	/* Odsunięcie dolne dla podkreślenia */
 }
 
 .skills-title p {
 	font-size: clamp(0.7rem, 0.656rem + 0.703vw, 1.2rem);
 	line-height: 1.6;
-	/* Wysokość linii dla lepszej czytelności */
 	margin-bottom: 15px;
-	/* Odsunięcie dolne między akapitami */
 	max-width: 1500px;
-	/* Maksymalna szerokość akapitu */
 	margin-left: auto;
-	/* Wyśrodkowanie */
 	margin-right: auto;
-	/* Wyśrodkowanie */
 }
 
 .portfolio .section-title {
 	font-size: 36px;
-	/* Rozmiar nagłówka */
 	font-weight: 700;
-	/* Pogrubienie nagłówka */
 	margin-bottom: 20px;
-	/* Odsunięcie od dolnej krawędzi */
 	border-bottom: 2px solid #7c19ff;
-	/* Podkreślenie nagłówka */
 	display: inline-block;
-	/* Wyświetlenie jako blok */
 	padding-bottom: 10px;
-	/* Odsunięcie dolne dla podkreślenia */
 }
 
 .portfolio .section-description {
 	font-size: clamp(0.7rem, 0.656rem + 0.703vw, 1.2rem);
 	line-height: 1.6;
-	/* Wysokość linii dla lepszej czytelności */
 	margin-bottom: 15px;
-	/* Odsunięcie dolne między akapitami */
 	max-width: 1500px;
-	/* Maksymalna szerokość akapitu */
 	margin-left: auto;
-	/* Wyśrodkowanie */
 	margin-right: auto;
-	/* Wyśrodkowanie */
 }
 
 .portfolio .card {
@@ -619,11 +616,8 @@ body {
 
 .portfolio .tech-icons img {
 	width: clamp(0.7em, 0.656rem + 0.703vw, 1.2rem);
-	/* Ustawia rozmiar od 1.5em do 2em w zależności od rozmiaru ekranu */
 	height: clamp(0.7em, 0.656rem + 0.703vw, 1.2rem);
-	/* Utrzymuje proporcje, ale też ogranicza wysokość */
 	vertical-align: middle;
-	/* Ustawia obrazek na środkowej wysokości w linii z tekstem */
 }
 
 @keyframes showRight {
@@ -632,7 +626,6 @@ body {
 	}
 }
 
-/* Responsywność dla mniejszych ekranów (tablety i mniejsze) */
 @media (max-width: 1600px) {
 
 	.photo img {
@@ -644,24 +637,20 @@ body {
 		justify-content: center;
 	}
 
-	/* Navbar - zmiana układu */
 	.nav-links {
 		flex-direction: column;
 		display: none;
-		/* Ukrycie linków na mniejszych ekranach */
 	}
 
-	/* Dodanie przycisku menu dla mobilnych */
 	.navbar.active .nav-links {
 		display: flex;
 	}
 
 }
 
-/* Responsywność dla bardzo małych ekranów (smartfony) */
 @media (max-width: 1300px) {
 
-	.home{
+	.home {
 		padding: 0 10%;
 	}
 
