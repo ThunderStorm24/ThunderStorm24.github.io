@@ -4,32 +4,49 @@ window.addEventListener("scroll", function () {
 });
 document.addEventListener("DOMContentLoaded", function () {
     const text = "About me";
-    const speed = 450;
+    const speed = 250;
     const eraseSpeed = 50;
-    const delayBetweenCycles = 1000;
     let index = 0;
     let isErasing = false;
     const textElement = document.getElementById("text");
+    let typingInterval;
 
     function typeWriter() {
         if (!isErasing && index < text.length) {
             textElement.textContent += text.charAt(index);
             index++;
-            setTimeout(typeWriter, speed);
+            typingInterval = setTimeout(typeWriter, speed);
         } else if (isErasing && index > 0) {
             textElement.textContent = text.substring(0, index - 1);
             index--;
-            setTimeout(typeWriter, eraseSpeed);
+            typingInterval = setTimeout(typeWriter, eraseSpeed);
         } else if (!isErasing && index === text.length) {
-            isErasing = true;
-            setTimeout(typeWriter, delayBetweenCycles);
-        } else if (isErasing && index === 0) {
-            isErasing = false;
-            setTimeout(typeWriter, delayBetweenCycles);
+            clearTimeout(typingInterval); 
         }
     }
 
-    typeWriter();
+    function startTyping() {
+        isErasing = false;
+        typeWriter();
+    }
+
+    function startErasing() {
+        isErasing = true;
+        typeWriter();
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                startTyping();
+            } else if (!entry.isIntersecting && index > 0) {
+                startErasing();
+            }
+        });
+    }, { threshold: 0.9 }); 
+
+    const section = document.getElementById("typewriter-text");
+    observer.observe(section);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
