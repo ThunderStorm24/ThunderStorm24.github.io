@@ -108,3 +108,77 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 2000);
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+	const targetText = "Skills";
+	const titleElement = document.querySelector(".section-title");
+
+	let currentIndex = 0;
+	let isAnimated = false;
+
+	function animateText() {
+		if (isAnimated) return;
+		isAnimated = true;
+
+		function changeLetter() {
+			let letterArray = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split('');
+			let interval = setInterval(() => {
+				titleElement.textContent = targetText.slice(0, currentIndex) + letterArray[Math.floor(Math.random() * letterArray.length)];
+			}, 50);
+
+			setTimeout(() => {
+				clearInterval(interval);
+				titleElement.textContent = targetText.slice(0, currentIndex + 1);
+				currentIndex++;
+				if (currentIndex < targetText.length) {
+					changeLetter();
+				} else {
+					titleElement.classList.add("glitch-effect");
+				}
+			}, 500);
+		}
+
+		changeLetter();
+	}
+
+	function resetAnimation() {
+		isAnimated = false;
+		currentIndex = 0;
+		titleElement.classList.remove("glitch-effect");
+		titleElement.textContent = "";
+	}
+
+	function onScroll() {
+		const sectionPosition = document.querySelector('.skills').getBoundingClientRect();
+		const inViewport = sectionPosition.top < window.innerHeight && sectionPosition.bottom >= 0;
+
+		if (inViewport) {
+			animateText();
+		} else {
+			resetAnimation();
+		}
+	}
+
+	window.addEventListener('scroll', onScroll);
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+	const scrollContainer = document.querySelector(".icon-scroll");
+
+	const icons = Array.from(scrollContainer.children);
+	icons.forEach(icon => {
+		const clone = icon.cloneNode(true);
+		scrollContainer.appendChild(clone);
+	});
+
+	let scrollSpeed = 1;
+
+	function autoScroll() {
+		scrollContainer.scrollLeft += scrollSpeed;
+
+		if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
+			scrollContainer.scrollLeft = 0;
+		}
+	}
+
+	setInterval(autoScroll, 20); 
+});
