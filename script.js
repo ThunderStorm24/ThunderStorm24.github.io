@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    const roleDescriptions = ["Programmer", "Web Designer", "Front-end Developer", "Back-end Developer"];
+    const roleDescriptions = ["Programmer", "Web Designer", "Front-end", "Back-end"];
     const typingSpeed = 150;
     const deletingSpeed = 100;
     const delayBetweenTexts = 1500;
