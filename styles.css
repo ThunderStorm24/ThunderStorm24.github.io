@@ -703,7 +703,6 @@ body {
 }
 
 .portfolio .card:hover {
-	transform: scale(1.01);
 }
 
 .portfolio .card-title {
