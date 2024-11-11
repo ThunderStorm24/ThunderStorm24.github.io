@@ -160,25 +160,3 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	window.addEventListener('scroll', onScroll);
 });
-
-document.addEventListener("DOMContentLoaded", function() {
-	const scrollContainer = document.querySelector(".icon-scroll");
-
-	const icons = Array.from(scrollContainer.children);
-	icons.forEach(icon => {
-		const clone = icon.cloneNode(true);
-		scrollContainer.appendChild(clone);
-	});
-
-	let scrollSpeed = 1;
-
-	function autoScroll() {
-		scrollContainer.scrollLeft += scrollSpeed;
-
-		if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
-			scrollContainer.scrollLeft = 0;
-		}
-	}
-
-	setInterval(autoScroll, 20); 
-});
