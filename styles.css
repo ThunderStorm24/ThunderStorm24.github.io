@@ -21,7 +21,6 @@ body {
 	left: 0;
 	width: 100%;
 	padding: 20px 10%;
-	background: red;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -84,7 +83,14 @@ body {
 	color: #d1a1d1;
 }
 
-.nav-links a.active {}
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
 
 .intro {
 	background: #120069;
@@ -718,9 +724,6 @@ body {
 	transition: transform 0.7s;
 }
 
-.portfolio .card:hover {
-}
-
 .portfolio .card-title {
 	font-size: 1.8rem;
 }
@@ -757,13 +760,56 @@ body {
 		justify-content: center;
 	}
 
-	.nav-links {
-		flex-direction: column;
-		display: none;
-	}
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 75px;
+        right: 20px;
+        background: rgba(46, 2, 73, 1);
+        width: 220px;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Cień */
+        transform: translateY(-20px);
+    }
 
 	.navbar.active .nav-links {
 		display: flex;
+	}
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+	.nav-links a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 1.8rem;
+        background: none;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+	.stickyy {
+		background: rgba(46, 2, 73, 1);
+		padding: 8px 5%;
+	}
+
+	.stickyyy{
+		background: rgba(46, 2, 73, 1);
 	}
 
 }

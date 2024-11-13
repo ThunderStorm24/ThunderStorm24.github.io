@@ -1,7 +1,32 @@
 window.addEventListener("scroll", function () {
     var navbar = document.querySelector("nav");
+    var navlinks = document.querySelector("ul");
     navbar.classList.toggle("stickyy", window.scrollY > 100);
+    navlinks.classList.toggle("stickyyy", window.scrollY > 100);
 });
+
+function toggleMenu() {
+    const navLinks = document.querySelector(".nav-links");
+    navLinks.classList.toggle("active");
+}
+
+function closeMenuOnClickOutside(event) {
+    const navLinks = document.querySelector(".nav-links");
+    const menuToggle = document.querySelector(".menu-toggle");
+    if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
+        navLinks.classList.remove("active");
+    }
+}
+
+function closeMenuOnScroll() {
+    const navLinks = document.querySelector(".nav-links");
+    navLinks.classList.remove("active");
+}
+
+document.addEventListener("click", closeMenuOnClickOutside);
+
+document.addEventListener("scroll", closeMenuOnScroll);
+
 document.addEventListener("DOMContentLoaded", function () {
     const text = "About me";
     const speed = 250;
@@ -175,7 +200,7 @@ document.addEventListener("DOMContentLoaded", function () {
         iconsContainer.appendChild(icon.cloneNode(true));
     });
     
-    
+
     scrollContainer.innerHTML = '';
     scrollContainer.appendChild(iconsContainer);
 });
