@@ -743,6 +743,40 @@ body {
 	vertical-align: middle;
 }
 
+footer {
+	position: relative;
+}
+.footer-divider {
+	height: 2px;
+	background: linear-gradient(to right, #444, #777, #444);
+	margin: 10px auto;
+	width: 80%;
+	border-radius: 10px;
+}
+.footer-links a {
+	font-size: 1.2rem;
+	color: #ddd;
+	text-decoration: none;
+	transition: color 0.3s, transform 0.3s;
+}
+.footer-links a:hover {
+	color: #ffcc00;
+	transform: scale(1.1);
+}
+.footer-links i {
+	font-size: 1.5rem;
+	margin-right: 8px;
+}
+.footer-email {
+	font-size: 1.2rem;
+	color: #bbb;
+}
+.footer-email i {
+	font-size: 1.5rem;
+	margin-right: 10px;
+	color: #ddd;
+}
+
 @keyframes showRight {
 	100% {
 		width: 0%;
