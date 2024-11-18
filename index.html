@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
-<body>
+<body data-bs-theme="light">
 
 <!-- Navbar -->
 <nav class="navbar_">
@@ -24,7 +24,8 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contact">Contact</a></li>
-    </ul>
+        <button class="theme-toggle" onclick="toggleTheme()">🌙</button> <!-- Przycisk motywu -->  
+    </ul> 
 </nav>
 
     <!-- Sekcja powitalna -->
@@ -137,7 +138,7 @@
     <!-- Sekcja o umiejętnościach -->
     <section id="skills" class="skills">
         <div class="text-center mt-5 skills-title">
-            <h2 class="section-title">Skills</h2>
+            <h2 id="skills-title" class="section-title">Skills</h2>
             <div class="icon-scroll hide">
                 <div class="icon"><i class="fab fa-html5"></i></div>
                 <div class="icon"><i class="fab fa-css3-alt"></i></div>
@@ -339,7 +340,7 @@
                                 <!-- PHP -->
                                 <div class="col mb-4">
                                     <div class="card text-center p-3 shadow-sm">
-                                        <i class="fab fa-php fa-3x text-dark mb-3"></i>
+                                        <i class="fab fa-php fa-3x text-secondary mb-3"></i>
                                         <h5 class="card-title">PHP</h5>
                                         <div class="font-weight-bold text-success mt-2">Advanced</div>
                                         <div class="progress">

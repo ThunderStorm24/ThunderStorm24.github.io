@@ -5,6 +5,60 @@ window.addEventListener("scroll", function () {
     navlinks.classList.toggle("stickyyy", window.scrollY > 100);
 });
 
+// Funkcja do przełączania motywu
+function toggleTheme() {
+    const body = document.body;
+
+    // Przełączanie motywu
+    const currentTheme = body.getAttribute('data-bs-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    body.setAttribute('data-bs-theme', newTheme);
+
+    // Zmiana ikonki przycisku
+    const themeButton = document.querySelector('.theme-toggle');
+    themeButton.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+
+    const sections = document.querySelectorAll('#about, #skills, #portfolio');
+    sections.forEach(section => {
+        if (section.classList.contains('bg-light')) {
+            section.classList.remove('bg-light');
+        }
+    });
+
+    // Zapisanie wybranego motywu w localStorage
+    localStorage.setItem('theme', newTheme);
+}
+
+// Ustawienie motywu na podstawie preferencji systemowych lub zapisanych w localStorage
+function setInitialTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (savedTheme) {
+        // Ustawienie motywu według zapisanego w localStorage
+        document.body.setAttribute('data-bs-theme', savedTheme);
+    } else {
+        // Ustawienie motywu na podstawie preferencji systemowych, jeśli brak zapisanej opcji
+        document.body.setAttribute('data-bs-theme', systemPrefersDark ? 'dark' : 'light');
+    }
+
+    const sections = document.querySelectorAll('#about, #skills, #portfolio');
+    sections.forEach(section => {
+        if (section.classList.contains('bg-light')) {
+            section.classList.remove('bg-light');
+        }
+    });
+
+    // Ustawienie ikony przycisku na podstawie wybranego motywu
+    const themeButton = document.querySelector('.theme-toggle');
+    const currentTheme = document.body.getAttribute('data-bs-theme');
+    themeButton.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+}
+
+// Wywołaj funkcję przy załadowaniu strony
+document.addEventListener('DOMContentLoaded', setInitialTheme);
+
+
 function toggleMenu() {
     const navLinks = document.querySelector(".nav-links");
     navLinks.classList.toggle("active");

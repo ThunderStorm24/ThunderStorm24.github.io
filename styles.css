@@ -92,6 +92,19 @@ body {
     cursor: pointer;
 }
 
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: inherit;
+    margin-left: 1rem;
+}
+
+.theme-toggle:hover {
+    opacity: 0.8;
+}
+
 .intro {
 	background: #120069;
 	display: block;
@@ -775,6 +788,43 @@ footer {
 	font-size: 1.5rem;
 	margin-right: 10px;
 	color: #ddd;
+}
+
+body[data-bs-theme="dark"] #about {
+	background-color: #121212; /* Ciemne tło */
+	color: #e0e0e0;
+}
+
+body[data-bs-theme="dark"] .cursor {
+	color: #e0e0e0;
+}
+body[data-bs-theme="dark"] #skills {
+	background-color: #181818; /* Ciemne tło */
+	color: #f5f5f5;
+}
+
+body[data-bs-theme="dark"] #skills-title {
+ 	color: white;
+}
+
+body[data-bs-theme="dark"] .skills-title h2 {
+    color: #e0e0e0; /* Jasny tekst w tytule */
+    border-bottom: 2px solid #7c19ff;
+}
+
+body[data-bs-theme="dark"] .skills-title h2.glitch-effect::before,
+body[data-bs-theme="dark"] .skills-title h2.glitch-effect::after {
+    background: #121212; /* Ciemne tło dla glitch efektu */
+    color: #7c19ff; /* Kolor tekstu dla glitch efektu */
+}
+
+body[data-bs-theme="dark"] #portfolio {
+	background-color: #121212; /* Ciemne tło */
+	color: #e0e0e0;
+}
+
+body[data-bs-theme="dark"] .icon{
+	background-color: #212529;
 }
 
 @keyframes showRight {
