@@ -16,6 +16,7 @@ The site is designed to highlight my programming skills, showcase completed proj
 ## Home Page
 
 The **Home Page** introduces me, my background, and my main skills at a glance.  
+
 ![Home Page](images/readme/Home.png)
 
 ---
@@ -23,6 +24,7 @@ The **Home Page** introduces me, my background, and my main skills at a glance.
 ## About Page
 
 The **About Page** provides more detailed information about my personal and professional background, education, and interests.  
+
 ![About Page](images/readme/About.png)
 
 ---
@@ -30,6 +32,7 @@ The **About Page** provides more detailed information about my personal and prof
 ## Skills
 
 This section showcases my **technical skills** and areas of expertise.  
+
 ![Skills](images/readme/Skills.png)
 
 ---
@@ -37,4 +40,5 @@ This section showcases my **technical skills** and areas of expertise.
 ## Projects
 
 The **Projects Page** highlights my completed projects with descriptions, links, and screenshots.  
+
 ![Projects](images/readme/Projects.png)
