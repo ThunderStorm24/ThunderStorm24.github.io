@@ -6,6 +6,10 @@
 
 # Portfolio Site  
 
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) 
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white) 
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+
 This is a personal **portfolio website** that presents my background, education, and technical skills.  
 It contains sections about me, my projects, and professional experience, providing visitors with a clear overview of my work and achievements.  
 
